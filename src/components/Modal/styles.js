@@ -9,7 +9,7 @@ export const Container = styled.div`
   position: fixed;
   padding: 50px;
   max-width: 1200px;
-  position: relative; /* Added for positioning the close button */
+  position: relative; 
 
   iframe {
     border: none;
@@ -45,7 +45,7 @@ export const CloseButton = styled.button`
   transition:0.3s ease-in-out;
 
   i {
-    pointer-events: none; /* To ensure clicking the icon triggers the button click */
+    pointer-events: none;
   }
 
   &:hover {

@@ -41,7 +41,7 @@ function Detail() {
       {movie && (
         <>
           <Background image={getImages(movie.backdrop_path)} />
-          <Fade duration={2000}> {/* Envolvendo o container principal */}
+          <Fade duration={2000}> 
             <Container>
               <Cover>
                 <img src={getImages(movie.poster_path)} alt="filme-img" />
@@ -60,7 +60,7 @@ function Detail() {
 
           <ContainerMovies>
             {movieVideos && movieVideos.map(video => (
-              <Fade duration={2000} key={video.id}> {/* Envolvendo os vídeos */}
+              <Fade duration={2000} key={video.id}> 
                 <div>
                   <h4>{video.name}</h4>
                   <iframe
@@ -76,7 +76,7 @@ function Detail() {
           </ContainerMovies>
 
           {movieSimilar && (
-            <Fade duration={2000}> {/* Envolvendo o slider */}
+            <Fade duration={2000}>
               <Slider info={movieSimilar} title={"Talvez você se interesse"} />
             </Fade>
           )}

@@ -17,16 +17,13 @@ function Series() {
   useEffect(() => {
     async function fetchData() {
       try {
-        console.log("Fetching series data...");
+        
         const series = await seriesResponse();
         const airingToday = await seriesResponse(); // Replace this with your function to fetch series airing today
         const topSeries = await topSeriesResponse();
         const popularPeople = await peopleResponse(); // Replace this with your function to fetch popular people
 
-        console.log("Series data:", series);
-        console.log("Airing today data:", airingToday);
-        console.log("Top series data:", topSeries);
-        console.log("Popular people data:", popularPeople);
+       
 
         setSeriesData(series);
         setAiringTodayData(airingToday);
@@ -52,7 +49,7 @@ function Series() {
             <Modal serieId={seriesData[0].id} setShowModal={setShowModal} />
           )}
           <Container>
-            {/* Add any content here if needed */}
+         
           </Container>
         </Background>
       )}
